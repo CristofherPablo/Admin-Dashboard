@@ -2,9 +2,9 @@
 
 :root {
   --mainColor: #0a2647;
-  --secondaryColor: #144272;
+  --secondaryColor: rgb(20, 66, 114);
   --thirdColor: #205295;
-  --forthColor: #2c74b3;
+  --forthColor: rgb(44, 116, 179);
   --fontColor: #ffffff;
   --hoverColor: #0a2647;
 }
@@ -17,18 +17,19 @@ html {
 }
 
 body {
-  background-color: var(--mainColor);
+  background-color: var(--secondaryColor);
   margin: 0;
 }
 
-a{
-    text-decoration: none;
-    color: var(--fontColor);
+a {
+  text-decoration: none;
+  color: var(--fontColor);
 }
 
 .wrapper {
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 150px;
   min-height: 100vh;
 }
 /* Side navigation bar settings */
@@ -45,67 +46,107 @@ a{
 
 /* Logo */
 
-.sideNav .sidelogo{
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.sideNav .sidelogo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.sideNav .sidelogo img{
-    width: 35px;
+.sideNav .sidelogo img {
+  width: 35px;
 }
 
-.sideNav .sidelogo a{
-    color: var(--fontColor);
-    font-size: 1.3rem;
-    font-weight: 500;
-    transition: .3s;
+.sideNav .sidelogo a {
+  color: var(--fontColor);
+  font-size: 1.3rem;
+  font-weight: 500;
+  transition: 0.3s;
 }
 
-.sideNav .sidelogo a:hover{
-    transform: scale(1.1);
+.sideNav .sidelogo a:hover {
+  transform: scale(1.1);
 }
 
 /* sidebar links*/
 
 .sideInternalLinks a:hover,
-.sideSettings a:hover{
-    text-decoration: underline;
-    color: var(--hoverColor);
+.sideSettings a:hover {
+  text-decoration: underline;
+  color: var(--hoverColor);
 }
 
 .sideInternalLinks ul,
 .sideInternalLinks ul li,
 .sideSettings ul,
-.sideSettings ul li{
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+.sideSettings ul li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 .sideInternalLinks ul li,
-.sideSettings ul li{
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    padding: 10px 0;
+.sideSettings ul li {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 0;
 }
 
 /* Settings nav bar */
 
-.sideSettings{
-    margin-top: auto;
+.sideSettings {
+  margin-top: auto;
 }
 
-.sideSettings ul li img{
-   width: 24px;
+.sideSettings ul li img {
+  width: 24px;
 }
-
 
 /* Main Nav settings */
 .navMain {
   grid-column: span 2;
-  border: 1px solid green;
+  background-color: var(--thirdColor);
+  box-shadow: rgba(44, 116, 179, 0.1) 0px 1px 0px;
+}
+
+/* Top Sub Nav */
+
+.topSubNav{
+  display: flex;
+  color: var(--fontColor);
+  padding: 10px 15px;
+}
+
+.topSubNav .searchBar{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 70%;
+}
+
+.topSubNav .searchBar img{
+  width: 30px;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.topSubNav .searchBar img:hover{
+  scale: 1.2;
+}
+
+.topSubNav .searchBar form{
+  width: 70%;
+}
+
+.topSubNav .searchBar input{
+  height: 30px;
+  border-radius: 20px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  width: 80%;
+}
+
+.topSubNav .topNav{
+  margin-left: auto;
 }
 
 /* Main settings */
@@ -125,3 +166,13 @@ footer {
   grid-column: span 3;
   border: 1px solid pink;
 }
+
+/*
+  https://colorhunt.co/palette/0a26471442722052952c74b3
+
+  https://cdn.statically.io/gh/TheOdinProject/curriculum/43cc6ab69fdfbef40d431a65677d2144668930ac/intermediate_html_css/grid/project_admin_dashboard/imgs/dashboard-project.png
+
+  https://contactjw.github.io/admin-dashboard/
+
+*/
+
