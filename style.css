@@ -5,7 +5,8 @@
   --secondaryColor: #144272;
   --thirdColor: #205295;
   --forthColor: #2c74b3;
-  --whiteColor: #ffffff;
+  --fontColor: #ffffff;
+  --hoverColor: #0a2647;
 }
 
 html {
@@ -20,30 +21,92 @@ body {
   margin: 0;
 }
 
+a{
+    text-decoration: none;
+    color: var(--fontColor);
+}
+
 .wrapper {
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
 }
+/* Side navigation bar settings */
 
 .sideNav {
   grid-row: span 3;
-  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  background-color: var(--forthColor);
+  padding: 15px;
+  color: var(--fontColor);
 }
+
+.sideNav a:hover{
+    text-decoration: underline;
+    color: var(--hoverColor);
+}
+
+/* Logo */
+
+.sideNav .sidelogo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sideNav .sidelogo img{
+    width: 35px;
+}
+
+.sideNav .sidelogo a{
+    color: var(--fontColor);
+    font-size: 1.3rem;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.sideNav .sidelogo a:hover{
+    transform: scale(1.1);
+}
+
+/* sidebar links*/
+
+
+.sideInternalLinks ul,
+.sideInternalLinks ul li{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sideInternalLinks ul li{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+/* Main Nav settings */
 .navMain {
   grid-column: span 2;
   border: 1px solid green;
 }
+
+/* Main settings */
 .main {
   grid-row: span 2;
   border: 1px solid orange;
 }
+
+/* Navbar settings */
 .navBar {
   grid-row: span 2;
   border: 1px solid blue;
 }
 
+/* Footer settings */
 footer {
   grid-column: span 3;
-  height: 50px;
   border: 1px solid pink;
 }
