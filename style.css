@@ -29,6 +29,7 @@ a{
 .wrapper {
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
+  min-height: 100vh;
 }
 /* Side navigation bar settings */
 
@@ -40,11 +41,6 @@ a{
   background-color: var(--forthColor);
   padding: 15px;
   color: var(--fontColor);
-}
-
-.sideNav a:hover{
-    text-decoration: underline;
-    color: var(--hoverColor);
 }
 
 /* Logo */
@@ -72,20 +68,39 @@ a{
 
 /* sidebar links*/
 
+.sideInternalLinks a:hover,
+.sideSettings a:hover{
+    text-decoration: underline;
+    color: var(--hoverColor);
+}
 
 .sideInternalLinks ul,
-.sideInternalLinks ul li{
+.sideInternalLinks ul li,
+.sideSettings ul,
+.sideSettings ul li{
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
 
-.sideInternalLinks ul li{
+.sideInternalLinks ul li,
+.sideSettings ul li{
     display: flex;
     align-items: center;
     gap: 20px;
     padding: 10px 0;
 }
+
+/* Settings nav bar */
+
+.sideSettings{
+    margin-top: auto;
+}
+
+.sideSettings ul li img{
+   width: 24px;
+}
+
 
 /* Main Nav settings */
 .navMain {
