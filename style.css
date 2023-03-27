@@ -29,7 +29,7 @@ a {
 .wrapper {
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
-  grid-template-rows: 150px;
+  grid-template-rows: 200px;
   min-height: 100vh;
 }
 /* Side navigation bar settings */
@@ -103,8 +103,11 @@ a {
 }
 
 /* Main Nav settings */
+
 .navMain {
   grid-column: span 2;
+  display: flex;
+  flex-direction: column;
   background-color: var(--thirdColor);
   box-shadow: rgba(44, 116, 179, 0.1) 0px 1px 0px;
 }
@@ -114,7 +117,7 @@ a {
 .topSubNav {
   display: flex;
   color: var(--fontColor);
-  padding: 10px 15px;
+  padding: 0px 15px 10px 15px;
 }
 
 .topSubNav .searchBar {
@@ -163,29 +166,90 @@ a {
   cursor: pointer;
 }
 
-.topSubNav .topNav .userIcon {
+.userIcon {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   border-radius: 50px;
   background-color: var(--forthColor);
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.topSubNav .topNav ul li:nth-child(3) {
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.topSubNav .topNav ul li {
+  transition: 0.2s;
+}
+
+.topSubNav .topNav ul li:hover {
+  scale: 1.1;
+}
+
+/* bottom part of the main nav */
+
+.bottomSubNav {
+  display: flex;
+  padding: 15px 15px 15px 10px;
+  color: var(--fontColor);
+}
+
+.bottomSubNav .userInformation {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.bottomSubNav .userInformation .userAvatar {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--forthColor);
+  border-radius: 30px;
   font-size: 1.3rem;
   font-weight: 500;
   cursor: pointer;
 }
 
-.topSubNav .topNav ul li:nth-child(3){
-  font-size: 1.3rem;
+.bottomSubNav .userInformation .name span {
+  font-size: 0.8rem;
+}
+
+.bottomSubNav .userInformation .name p {
+  margin: 3px 0 0 0;
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.bottomSubNav .buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-left: auto;
+}
+
+.bottomSubNav .buttons button{
+  width: 75px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: var(--forthColor);
+  color: var(--fontColor);
+  font-weight: 500;
+  border: none;
+  transition: .2s;
   cursor: pointer;
 }
 
-.topSubNav .topNav ul li{
-  transition: .2s;
-}
-
-.topSubNav .topNav ul li:hover{
+.bottomSubNav .buttons button:hover{
   scale: 1.1;
 }
 
@@ -198,7 +262,11 @@ a {
 /* Navbar settings */
 .navBar {
   grid-row: span 2;
-  border: 1px solid blue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  color: var(--fontColor);
 }
 
 /* Footer settings */
