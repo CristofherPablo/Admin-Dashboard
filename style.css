@@ -275,6 +275,7 @@ a {
   padding: 15px 15px 5px 15px;
   background-color: var(--thirdColor);
   border-radius: 7px;
+  width: 279px;
 }
 
 .navBar h3{
@@ -296,6 +297,29 @@ a {
 
 .navBar .announcements .infoAnnouncements p{
   font-size: 0.688rem;
+  color: rgb(217, 217, 217);
+}
+
+/* Trending cards section  */
+
+.navBar .trendingCard .cardInformationUser{
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  font-size: 0.688rem;
+}
+
+.navBar .trendingCard .cardInformationUser + .cardInformationUser{
+  margin-top: 15px;
+}
+
+.navBar .trendingCard .cardInformationUser span{
+  font-weight: 600;
+  font-size: 0.7rem;
+}
+
+.navBar .trendingCard .cardInformationUser p{
+  margin: 3px 0px;
   color: rgb(217, 217, 217);
 }
 
