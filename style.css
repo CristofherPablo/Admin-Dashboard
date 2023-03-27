@@ -237,7 +237,7 @@ a {
   margin-left: auto;
 }
 
-.bottomSubNav .buttons button{
+.bottomSubNav .buttons button {
   width: 75px;
   height: 30px;
   border-radius: 15px;
@@ -245,11 +245,11 @@ a {
   color: var(--fontColor);
   font-weight: 500;
   border: none;
-  transition: .2s;
+  transition: 0.2s;
   cursor: pointer;
 }
 
-.bottomSubNav .buttons button:hover{
+.bottomSubNav .buttons button:hover {
   scale: 1.1;
 }
 
@@ -261,52 +261,57 @@ a {
   margin-bottom: 30px;
 }
 
-.main h3{
+.main h3 {
   margin-bottom: 15px;
 }
 
-.main .mainWrapper{
+.main .mainWrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 25px;
 }
 
-.main .mainWrapper .mainCard{
+.main .mainWrapper .mainCard {
   display: flex;
   flex-direction: column;
   height: 180px;
   min-width: 200px;
   background-color: var(--thirdColor);
   border-radius: 10px;
-  background-image: -webkit-linear-gradient(left, rgb(44, 116, 179), rgb(44, 116, 179) 2%, transparent 2%, transparent 100%);
+  background-image: -webkit-linear-gradient(
+    left,
+    rgb(44, 116, 179),
+    rgb(44, 116, 179) 2%,
+    transparent 2%,
+    transparent 100%
+  );
   padding: 20px 30px;
 }
 
-.main .mainWrapper .mainCard a:hover{
+.main .mainWrapper .mainCard a:hover {
   text-decoration: underline;
 }
 
-.main .mainWrapper .mainCard p{
+.main .mainWrapper .mainCard p {
   font-size: 0.813rem;
   color: rgb(217, 217, 217);
 }
 
-.main .mainWrapper .mainCard .cardFooter{
+.main .mainWrapper .mainCard .cardFooter {
   margin-top: auto;
   display: flex;
   gap: 10px;
   justify-content: end;
 }
 
-.main .mainWrapper .mainCard .cardFooter img{
+.main .mainWrapper .mainCard .cardFooter img {
   width: 24px;
   margin-left: 20px;
 }
 
-.main .mainWrapper .mainCard .cardFooter .share{
+.main .mainWrapper .mainCard .cardFooter .share {
   width: 20px;
 }
-
 
 /* Navbar settings */
 .navBar {
@@ -320,54 +325,58 @@ a {
 }
 
 .navBar .announcements,
-.navBar .trendingCard{
+.navBar .trendingCard {
   padding: 15px 15px 5px 15px;
   background-color: var(--thirdColor);
   border-radius: 7px;
   width: 259px;
 }
 
-.navBar h3{
+.navBar h3 {
   align-self: flex-start;
   margin-bottom: 0px;
 }
 
-.navBar .announcements .infoAnnouncements div+div{
+.navBar .announcements .infoAnnouncements div + div {
   border-top: 1px solid white;
 }
 
-.navBar .announcements .infoAnnouncements div:nth-child(n+2) {
+.navBar .announcements .infoAnnouncements div:nth-child(n + 2) {
   padding-top: 15px;
 }
 
-.navBar .announcements .infoAnnouncements div p{
+.navBar .announcements .infoAnnouncements div p {
   margin-bottom: 15px;
 }
 
-.navBar .announcements .infoAnnouncements p{
+.navBar .announcements .infoAnnouncements p {
   font-size: 0.688rem;
   color: rgb(217, 217, 217);
 }
 
 /* Trending cards section  */
 
-.navBar .trendingCard .cardInformationUser{
+.navBar .trendingCard {
+  padding-bottom: 15px;
+}
+
+.navBar .trendingCard .cardInformationUser {
   display: flex;
   gap: 15px;
   align-items: center;
   font-size: 0.688rem;
 }
 
-.navBar .trendingCard .cardInformationUser + .cardInformationUser{
+.navBar .trendingCard .cardInformationUser + .cardInformationUser {
   margin-top: 15px;
 }
 
-.navBar .trendingCard .cardInformationUser span{
+.navBar .trendingCard .cardInformationUser span {
   font-weight: 600;
   font-size: 0.7rem;
 }
 
-.navBar .trendingCard .cardInformationUser p{
+.navBar .trendingCard .cardInformationUser p {
   margin: 3px 0px;
   color: rgb(217, 217, 217);
 }
@@ -375,14 +384,13 @@ a {
 /* Footer settings */
 footer {
   grid-column: span 3;
-  border: 1px solid pink;
+  padding: 15px;
+  text-align: center;
+  color: var(--fontColor);
+  background-color: var(--thirdColor);
+  font-size: smaller;
 }
 
-/*
-  https://colorhunt.co/palette/0a26471442722052952c74b3
-
-  https://cdn.statically.io/gh/TheOdinProject/curriculum/43cc6ab69fdfbef40d431a65677d2144668930ac/intermediate_html_css/grid/project_admin_dashboard/imgs/dashboard-project.png
-
-  https://contactjw.github.io/admin-dashboard/
-
-*/
+footer a:hover {
+  text-decoration: underline;
+}
