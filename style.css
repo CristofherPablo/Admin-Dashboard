@@ -256,9 +256,57 @@ a {
 /* Main settings */
 .main {
   grid-row: span 2;
-  padding: 10px;
+  padding: 10px 20px 10px 20px;
   color: var(--fontColor);
+  margin-bottom: 30px;
 }
+
+.main h3{
+  margin-bottom: 15px;
+}
+
+.main .mainWrapper{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.main .mainWrapper .mainCard{
+  display: flex;
+  flex-direction: column;
+  height: 180px;
+  min-width: 200px;
+  background-color: var(--thirdColor);
+  border-radius: 10px;
+  background-image: -webkit-linear-gradient(left, rgb(44, 116, 179), rgb(44, 116, 179) 2%, transparent 2%, transparent 100%);
+  padding: 20px 30px;
+}
+
+.main .mainWrapper .mainCard a:hover{
+  text-decoration: underline;
+}
+
+.main .mainWrapper .mainCard p{
+  font-size: 0.813rem;
+  color: rgb(217, 217, 217);
+}
+
+.main .mainWrapper .mainCard .cardFooter{
+  margin-top: auto;
+  display: flex;
+  gap: 10px;
+  justify-content: end;
+}
+
+.main .mainWrapper .mainCard .cardFooter img{
+  width: 24px;
+  margin-left: 20px;
+}
+
+.main .mainWrapper .mainCard .cardFooter .share{
+  width: 20px;
+}
+
 
 /* Navbar settings */
 .navBar {
@@ -276,7 +324,7 @@ a {
   padding: 15px 15px 5px 15px;
   background-color: var(--thirdColor);
   border-radius: 7px;
-  width: 279px;
+  width: 259px;
 }
 
 .navBar h3{
